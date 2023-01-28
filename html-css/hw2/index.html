@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <title>HW2 Gulp-SCSS</title>
+</head>
+<body class="page__body">
+    <header class="page__header header">
+        <div class="container">
+            <button class="header__menu-btn header__menu-btn--open" type="button">
+                <span class="header__menu-btn-top"></span>
+                <span class="header__menu-btn-middle"></span>
+                <span class="header__menu-btn-bottom"></span>
+                кнопка меню
+            </button>
+            <ul class="header__menu menu">
+                <li class="menu__item"><a href="#" class="menu__link menu__link--curent">Home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">about us</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">our journal</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">projects</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">news</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">features</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">contact </a></li>
+            </ul>
+            <picture class="header__img">
+                <source media="(max-width: 767px)" srcset="./img/header-img-mobile.jpg">
+                <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./img/header-img-tablet.jpg">
+                <source media="(min-width: 1200px)" srcset="./img/header-img-desc.jpg">
+                <img src="./img/header-img-desc.jpg" alt="header image">
+            </picture>
+        </div>
+    </header>
+    <main class="page__main">
+        <section class="recent-posts">
+            <div class="container">
+                <h2 class="section-title">
+                    - our Recent posts
+                </h2>
+                <ul class="resent-posts__list resents">
+                    <li class="resents__item">
+                        <a href="#" class="resents__link">
+                            <img src="./img/recent-posts/post-img-1.jpg" alt="post-img-1" class="resents__img" width="160" height="140">
+                            <div class="resents__content">
+                                <h3 class="resents__title">
+                                    Aenean Adipiscing Etiam Vestibulum
+                                </h3>
+                                <p class="resents__sub-title">
+                                    Photography, Journal &nbsp;&nbsp;/ &nbsp;&nbsp;9 Comments
+                                </p>
+                                <p class="resents__text">
+                                    Etiam porta sem malesuada euismod. Aenean leo quam. Pellentesque ornare sem lacinia quam venenatis
+                                    vestibulum.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="resents__item">
+                        <a href="#" class="resents__link">
+                            <img src="./img/recent-posts/post-img-2.jpg" alt="post-img-2" class="resents__img" width="160" height="140">
+                            <div class="resents__content">
+                                <h3 class="resents__title">
+                                    Aenean Adipiscing Etiam Vestibulum
+                                </h3>
+                                <p class="resents__sub-title">
+                                    Photography, Journal &nbsp;&nbsp;/ &nbsp;&nbsp;9 Comments
+                                </p>
+                                <p class="resents__text">
+                                    Etiam porta sem malesuada euismod. Aenean leo quam. Pellentesque ornare sem lacinia quam venenatis
+                                    vestibulum.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="resents__item">
+                        <a href="#" class="resents__link">
+                            <img src="./img/recent-posts/post-img-3.jpg" alt="post-img-3" class="resents__img" width="160" height="140">
+                            <div class="resents__content">
+                                <h3 class="resents__title">
+                                    Aenean Adipiscing Etiam Vestibulum
+                                </h3>
+                                <p class="resents__sub-title">
+                                    Photography, Journal &nbsp;&nbsp;/ &nbsp;&nbsp;9 Comments
+                                </p>
+                                <p class="resents__text">
+                                    Etiam porta sem malesuada euismod. Aenean leo quam. Pellentesque ornare sem lacinia quam venenatis
+                                    vestibulum.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="resents__item">
+                        <a href="#" class="resents__link">
+                            <img src="./img/recent-posts/post-img-4.jpg" alt="post-img-4" class="resents__img" width="160" height="140">
+                            <div class="resents__content">
+                                <h3 class="resents__title">
+                                    Aenean Adipiscing Etiam Vestibulum
+                                </h3>
+                                <p class="resents__sub-title">
+                                    Photography, Journal &nbsp;&nbsp;/ &nbsp;&nbsp;9 Comments
+                                </p>
+                                <p class="resents__text">
+                                    Etiam porta sem malesuada euismod. Aenean leo quam. Pellentesque ornare sem lacinia quam venenatis
+                                    vestibulum.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="instragram">
+            <div class="container">
+                <div class="instragram__wrapper">
+                    <h2 class="section-title">
+                        - Last Instagram Shot
+                    </h2>
+                    <a href="#" class="instragram__link">
+                        go to our instagram page -
+                    </a>
+                </div>
+                <ul class="instragram__list">
+                    <li class="instragram__item">
+                        <img src="./img/instagram/instagram-1.jpg" alt="instagram-1" class="instragram__img">
+                    </li>
+                    <li class="instragram__item">
+                        <img src="./img/instagram/instagram-2.jpg" alt="instagram-2" class="instragram__img">
+                    </li>
+                    <li class="instragram__item">
+                        <img src="./img/instagram/instagram-3.jpg" alt="instagram-3" class="instragram__img">
+                    </li>
+                    <li class="instragram__item">
+                        <img src="./img/instagram/instagram-4.jpg" alt="instagram-4" class="instragram__img">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="page__footer footer">
+        <div class="container">
+            <p class="footer__title">
+                - get in touch with us -
+            </p>
+            <p class="footer__text">
+                Maecenas faucibus molli interdum. Cras mattis consectetur purus sitor amet sed donec malesuada ullamcorper odio.
+            </p>
+            <ul class="footer__socials socials">
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="./img/icons/wifi.png" alt="wifi" class="socials__img" width="34" height="34">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="./img/icons/facebook.png" alt="facebook" class="socials__img" width="34" height="34">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="./img/icons/twitter.png" alt="twitter" class="socials__img" width="34" height="34">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="./img/icons/dribbble.png" alt="dribbble" class="socials__img" width="34" height="34">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="./img/icons/pinterest.png" alt="pinterest" class="socials__img" width="34" height="34">
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__address address">
+                <li class="address__row">
+                    Moonshine St. 14-05 Light City &nbsp;&nbsp;/
+                </li>
+                <li class="address__row">
+                    T. +00 (123) 456 78 90 &nbsp;&nbsp;/
+                </li>
+                <li class="address__row">
+                    first.last@email.com
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/scripts.min.js"></script>
+</body>
+</html>

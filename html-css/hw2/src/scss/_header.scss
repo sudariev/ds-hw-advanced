@@ -1,0 +1,131 @@
+.header {
+	padding-top: 23px;
+
+	@include mq(768px, min) {
+		padding-top: 40px;
+	}
+}
+
+.header__menu-btn {
+	margin-left: calc(100% - 44px);
+	font-size: 0;
+	width: 44px;
+	height: 37px;
+	background-color: #000000;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 23px;
+	position: relative;
+
+	.header__menu-btn-top,
+	.header__menu-btn-middle,
+	.header__menu-btn-bottom {
+		position: absolute;
+		background-color: #ffffff;
+		width: 17px;
+		height: 2px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: top 0.5s, transform 1.5s, width 1.5s;
+	}
+	.header__menu-btn-top {
+		top: 13px;
+	}
+	.header__menu-btn-top--close {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%) rotate(45deg);
+	}
+	.header__menu-btn-middle {
+		top: 17px;
+	}
+	.header__menu-btn-middle--close {
+		width: 0;
+	}
+	.header__menu-btn-bottom {
+		top: 21px;
+	}
+	.header__menu-btn-bottom--close {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%) rotate(135deg);
+	}
+
+	@include mq(768px, min) {
+		display: none;
+	}
+}
+
+.menu {
+	display: inline-block;
+	min-width: 182px;
+	position: absolute;
+	right: 25px;
+	top: 60px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.5s, opacity 0.5s;
+
+	&--shown {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	@include mq(768px, min) {
+		visibility: visible;
+		opacity: 1;
+		position: static;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 43px;
+	}
+	@include mq(1200px, min) {
+		margin-bottom: 51px;
+	}
+}
+.menu__item {
+	@include mq(768px, min) {
+		&:not(:last-child) {
+			margin-right: 34px;
+		}
+	}
+	@include mq(1200px, min) {
+		&:not(:last-child) {
+			margin-right: 68px;
+		}
+	}
+}
+.menu__link {
+	font-size: 11px;
+	line-height: 22px;
+	letter-spacing: 1.1px;
+	text-transform: uppercase;
+	color: $main-color;
+	text-decoration: none;
+	display: block;
+	padding: 5px 13px;
+	background: #f5f5f5;
+	transition: background 0.5s, color 0.5s;
+	&--curent {
+		color: $menu-color-curent;
+	}
+	&:hover {
+		background: #e5e5e5;
+	}
+
+	@include mq(768px, min) {
+		padding: 0;
+		background: none;
+		&:hover {
+			background: none;
+			color: $menu-color-curent;
+		}
+	}
+}
+
+.header__img {
+	display: block;
+	& img {
+		width: 100%;
+	}
+}

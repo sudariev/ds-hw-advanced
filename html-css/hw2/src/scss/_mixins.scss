@@ -1,0 +1,12 @@
+@mixin mq($screen, $size) {
+	@if ($size == "min") {
+		@media (min-width: $screen) {
+			@content;
+		}
+	}
+	@if ($size == "max") {
+		@media (max-width: $screen) {
+			@content;
+		}
+	}
+}

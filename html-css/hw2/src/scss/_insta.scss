@@ -1,0 +1,61 @@
+.instragram {
+	padding: 38px 0 42px;
+	@include mq(768px, min) {
+		padding: 47px 0 50px;
+		background-color: #f7f7f7;
+	}
+}
+.instragram__wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 13px;
+	@include mq(768px, min) {
+		margin-bottom: 35px;
+	}
+}
+.instragram__link {
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 22px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $main-color;
+	display: none;
+
+	@include mq(768px, min) {
+		display: block;
+	}
+}
+.instragram__list {
+	@include mq(768px, min) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	}
+	@include mq(1200px, min) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+.instragram__item {
+	display: flex;
+	@include mq(767px, max) {
+		&:nth-child(n + 2) {
+			display: none;
+		}
+	}
+	@include mq(768px, min) {
+		&:nth-child(n + 4) {
+			display: none;
+		}
+	}
+	@include mq(1200px, min) {
+		display: flex !important;
+	}
+}
+.instragram__img {
+	width: 100%;
+	margin-right: 22px;
+	@include mq(768px, min) {
+		margin: 0;
+	}
+}

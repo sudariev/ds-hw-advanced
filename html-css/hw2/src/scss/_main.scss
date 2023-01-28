@@ -1,0 +1,25 @@
+.page__body {
+	height: 100%;
+}
+.page__body {
+	display: flex;
+	flex-direction: column;
+}
+.page__main {
+	flex-grow: 1;
+}
+.container {
+	margin: 0 auto;
+	padding: 0 25px;
+	max-width: 1200px;
+}
+.section-title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: $main-color;
+	@include mq(768px, min) {
+		font-size: 16px;
+	}
+}
