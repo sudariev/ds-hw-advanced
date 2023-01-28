@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "description": "HW2, Dmytrii Sudariev, Gulp-SCSS, FE 101",
   "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
     "start": "node gulpfile.js",
     "dev": "gulp dev",
     "build": "gulp build"
+
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/sudariev/ds-hw-advanced.git"
-  },
-  "keywords": [
-    "hw2-gulp-scss"
-  ],
   "author": "Dmytrii Sudariev, FE 101",
   "license": "ISC",
+ 
   "devDependencies": {
     "browser-sync": "^2.27.11",
     "gulp": "^4.0.2",

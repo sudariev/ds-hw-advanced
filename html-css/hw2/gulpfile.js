@@ -1,38 +1,51 @@
-// import gulp from "gulp";
-// const { src, dest, watch, series, parallel } = gulp;
-const { src, dest, watch, parallel, series } = require("gulp");
+import gulp from "gulp";
+const { src, dest, watch, series, parallel } = gulp;
 
-import autoprefixer from "gulp-autoprefixer";
-import cleanCSS from "gulp-clean-css";
 import browserSync from "browser-sync";
 const bsServer = browserSync.create();
 
-import jsmin from "gulp-js-minify";
+import autoprefixer from "gulp-autoprefixer";
+import clean from "gulp-clean";
+import cleanCSS from "gulp-clean-css";
+import concat from "gulp-concat";
 import imagemin from "gulp-imagemin";
+import jsmin from "gulp-js-minify";
 import rename from "gulp-rename";
+import uglify from "gulp-uglify";
 import dartSass from "sass";
-import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass);
 
-function serve() {
-    bsServer.init({
-        server: {
-            baseDir: "./",
-            browser: "firefox",
-        },
-    });
+import gulpSass from "gulp-sass";
+
+function cleanDist() {
+    return src("./dist/", {
+        allowEmpty: true,
+    }).pipe(clean());
+}
+
+function html() {
+    return src("./index.html")
+        .pipe(dest("./dist/"))
+        .pipe(bsServer.reload({ stream: true }));
+}
+
+function images() {
+    return src("./src/img/**/*.{jpg,jpeg,png,svg,webp}")
+        .pipe(imagemin())
+        .pipe(dest("./dist/img"))
+        .pipe(bsServer.reload({ stream: true }));
 }
 
 function styles() {
     return src("./src/scss/style.scss")
         .pipe(sass().on("error", sass.logError))
         .pipe(
-            autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie7"], {
+            autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"], {
                 cascade: true,
             })
         )
         .pipe(cleanCSS({ compatibility: "ie8" }))
-        .pipe(rename("style.min.css"))
+        .pipe(rename("styles.min.css"))
         .pipe(dest("./dist/css/"))
         .pipe(bsServer.reload({ stream: true }));
 }
@@ -46,17 +59,12 @@ function scripts() {
         .pipe(bsServer.reload({ stream: true }));
 }
 
-function images() {
-    return src("./src/img/**/*.{jpg,jpeg,png,svg,webp}")
-        .pipe(imagemin())
-        .pipe(dest("./dist/img"))
-        .pipe(bsServer.reload({ stream: true }));
-}
-
-function cleanDist() {
-    return src("./dist/", {
-        allowEmpty: true,
-    }).pipe(clean());
+function serve() {
+    bsServer.init({
+        server: {
+            baseDir: "./",
+        },
+    });
 }
 
 function watcher() {
@@ -69,5 +77,11 @@ function watcher() {
     );
 }
 
-exports.dev = series(styles, scripts, images, parallel(serve, watcher));
-exports.build = series(cleanDist, styles, scripts, images);
+export const dev = series(
+    html,
+    styles,
+    scripts,
+    images,
+    parallel(serve, watcher)
+);
+export const build = series(cleanDist, html, styles, scripts, images);
