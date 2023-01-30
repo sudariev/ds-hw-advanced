@@ -25,14 +25,14 @@ function cleanDist() {
 
 function html() {
     return src("./index.html")
-        .pipe(dest("./dist/"))
+        .pipe(dest("./"))
         .pipe(bsServer.reload({ stream: true }));
 }
 
 function images() {
     return src("./src/img/**/*.{jpg,jpeg,png,svg,webp}")
         .pipe(imagemin())
-        .pipe(dest("./dist/img"))
+        .pipe(dest("./dist/img/"))
         .pipe(bsServer.reload({ stream: true }));
 }
 
