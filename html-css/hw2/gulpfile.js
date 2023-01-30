@@ -68,7 +68,7 @@ function serve() {
 }
 
 function watcher() {
-    watch("*./html").on("change", bsServer.reload);
+    watch("./*.html").on("change", bsServer.reload);
     watch("./src/styles/**/*.scss", styles);
     watch("./src/js/*.js", scripts);
     watch("./src/img/**/*.{jpg, jpeg,png,svg,webp}").on(
