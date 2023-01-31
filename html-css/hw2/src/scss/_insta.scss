@@ -27,6 +27,11 @@
 	}
 }
 .insta__list {
+	@include mq(608px, min) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
 	@include mq(768px, min) {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -37,7 +42,7 @@
 	}
 }
 .insta__item {
-	display: grid;
+	display: flex;
 	@include mq(767px, max) {
 		&:nth-child(n + 3) {
 			display: none;
