@@ -7,10 +7,10 @@
 		padding: 66px 0 69px;
 	}
 }
-.resent-posts__list {
+.recent-posts__list {
 	margin-top: 23px;
 }
-.resents {
+.recent {
 	@include mq(1200px, min) {
 		display: grid;
 		gap: 32px;
@@ -18,7 +18,7 @@
 		grid-auto-flow: column;
 	}
 }
-.resents__item {
+.recent__item {
 	margin-bottom: 28px;
 	@include mq(767px, max) {
 		&:nth-child(n + 4) {
@@ -29,20 +29,20 @@
 		margin-bottom: 0;
 	}
 }
-.resents__link {
+.recent__link {
 	text-decoration: none;
 	@include mq(768px, min) {
 		display: flex;
 	}
 }
-.resents__img {
+.recent__img {
 	width: 50%;
 	height: auto;
 	@include mq(768px, min) {
 		margin-right: 21px;
 	}
 }
-.resents__title {
+.recent__title {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 30px;
@@ -53,7 +53,7 @@
 		margin-top: 0;
 	}
 }
-.resents__sub-title {
+.recent__subtitle {
 	font-size: 11px;
 	line-height: 20px;
 	color: #7c7c7c;
@@ -61,7 +61,7 @@
 		margin-bottom: 13px;
 	}
 }
-.resents__text {
+.recent__text {
 	display: none;
 	@include mq(768px, min) {
 		display: block;
