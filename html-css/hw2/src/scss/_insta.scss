@@ -18,7 +18,7 @@
 	@include insta-section-link-font;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: $main-color;
+	color: $titles-color;
 	@include mq(768px, min) {
 		display: block;
 	}
