@@ -7,21 +7,18 @@
 }
 .insta__wrapper {
 	display: flex;
-	justify-content: space-between;
 	margin-bottom: 13px;
+	justify-content: space-between;
 	@include mq(768px, min) {
 		margin-bottom: 35px;
 	}
 }
 .insta__link {
-	font-weight: 700;
-	font-size: 13px;
-	line-height: 22px;
+	display: none;
+	@include insta-section-link-font;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: $main-color;
-	display: none;
-
 	@include mq(768px, min) {
 		display: block;
 	}
@@ -47,7 +44,6 @@
 			display: none;
 		}
 	}
-	// display: flex;
 	@include mq(767px, max) {
 		&:nth-child(n + 3) {
 			display: none;

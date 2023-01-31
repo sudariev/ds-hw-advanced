@@ -1,3 +1,4 @@
+// Media querries mixins
 @mixin mq($screen, $size) {
 	@if ($size == "min") {
 		@media (min-width: $screen) {
@@ -9,4 +10,27 @@
 			@content;
 		}
 	}
+}
+
+// Font mixins
+@mixin sections-title-font {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+}
+@mixin sections-title-font-mob {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 22px;
+}
+@mixin insta-section-link-font {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 22px;
 }

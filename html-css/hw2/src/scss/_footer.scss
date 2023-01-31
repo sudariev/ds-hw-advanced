@@ -1,7 +1,7 @@
 .footer {
 	padding: 38px 0 47px;
-	background-color: #000000;
 	text-align: center;
+	background-color: $footer-background-color;
 	@include mq(768px, min) {
 		padding: 56px 0;
 	}
@@ -10,25 +10,23 @@
 	}
 }
 .footer__title {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 22px;
+	@include sections-title-font-mob;
 	text-transform: uppercase;
 	color: #fefefe;
 	@include mq(768px, min) {
-		font-size: 16px;
+		@include sections-title-font;
 	}
 }
 .footer__text {
+	margin: 8px 0 26px;
 	font-size: 12px;
 	line-height: 20px;
-	color: $footer-color;
-	margin: 8px 0 26px;
+	color: $footer-text-color;
 	@include mq(768px, min) {
 		width: 684px;
+		margin: 22px auto 37px;
 		font-size: 16px;
 		line-height: 28px;
-		margin: 22px auto 37px;
 	}
 }
 .footer__socials {
@@ -53,11 +51,11 @@
 .address__row {
 	font-size: 14px;
 	line-height: 24px;
-	color: $footer-color;
+	color: $footer-text-color;
 	@include mq(768px, min) {
+		display: inline-block;
 		font-size: 16px;
 		line-height: 26px;
-		display: inline-block;
 		&:not(:last-child) {
 			margin-right: 10px;
 		}

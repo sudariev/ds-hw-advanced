@@ -9,17 +9,15 @@
 	flex-grow: 1;
 }
 .container {
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 25px;
-	max-width: 1200px;
 }
 .section-title {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 22px;
+	@include sections-title-font-mob;
 	text-transform: uppercase;
 	color: $main-color;
 	@include mq(768px, min) {
-		font-size: 16px;
+		@include sections-title-font;
 	}
 }

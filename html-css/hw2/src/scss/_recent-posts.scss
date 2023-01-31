@@ -13,8 +13,8 @@
 .recent {
 	@include mq(1200px, min) {
 		display: grid;
-		gap: 32px;
 		grid-template-rows: repeat(2, 1fr);
+		gap: 32px;
 		grid-auto-flow: column;
 	}
 }
@@ -22,7 +22,6 @@
 	margin-bottom: 28px;
 	@include mq(767px, max) {
 		margin-bottom: 32px;
-
 		&:nth-child(n + 4) {
 			display: none;
 		}
@@ -39,27 +38,25 @@
 }
 .recent__img {
 	width: 160px;
-	height: auto;
+	height: 140px;
 	@include mq(768px, min) {
 		margin-right: 21px;
 	}
 }
 .recent__title {
-	text-transform: capitalize;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 30px;
-	color: $main-color;
 	margin-top: 11px;
+	@include sections-title-font-mob;
+	text-transform: capitalize;
+	color: $recent-title-color;
 	@include mq(768px, min) {
-		font-size: 16px;
 		margin-top: 0;
+		@include sections-title-font;
 	}
 }
 .recent__subtitle {
 	font-size: 11px;
 	line-height: 20px;
-	color: #7c7c7c;
+	color: $recent-subtitle-color;
 	@include mq(768px, min) {
 		margin-bottom: 13px;
 	}
@@ -67,10 +64,10 @@
 .recent__text {
 	display: none;
 	@include mq(768px, min) {
-		width: 402px;
 		display: block;
+		width: 402px;
 		font-size: 14px;
 		line-height: 26px;
-		color: #5c5c5c;
+		color: $recent-text-color;
 	}
 }
