@@ -16,7 +16,7 @@
 .section-title {
 	@include sections-title-font-mob;
 	text-transform: uppercase;
-	color: $main-color;
+	color: $titles-color;
 	@include mq(768px, min) {
 		@include sections-title-font;
 	}
