@@ -42,7 +42,12 @@
 	}
 }
 .insta__item {
-	display: flex;
+	@include mq(607px, max) {
+		&:nth-child(n + 2) {
+			display: none;
+		}
+	}
+	// display: flex;
 	@include mq(767px, max) {
 		&:nth-child(n + 3) {
 			display: none;
