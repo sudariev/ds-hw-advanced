@@ -49,7 +49,7 @@
 		}
 	}
 	@include mq(1200px, min) {
-		display: flex;
+		display: flex !important;
 	}
 }
 .insta__img {
