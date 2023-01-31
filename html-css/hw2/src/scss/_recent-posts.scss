@@ -21,6 +21,8 @@
 .recent__item {
 	margin-bottom: 28px;
 	@include mq(767px, max) {
+		margin-bottom: 32px;
+
 		&:nth-child(n + 4) {
 			display: none;
 		}
@@ -65,6 +67,7 @@
 .recent__text {
 	display: none;
 	@include mq(768px, min) {
+		width: 402px;
 		display: block;
 		font-size: 14px;
 		line-height: 26px;
