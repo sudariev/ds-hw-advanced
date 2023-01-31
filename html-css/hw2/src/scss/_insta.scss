@@ -39,7 +39,7 @@
 .insta__item {
 	display: flex;
 	@include mq(767px, max) {
-		&:nth-child(n + 2) {
+		&:nth-child(n + 3) {
 			display: none;
 		}
 	}
