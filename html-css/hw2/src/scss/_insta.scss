@@ -1,11 +1,11 @@
-.instragram {
+.insta {
 	padding: 38px 0 42px;
 	@include mq(768px, min) {
 		padding: 47px 0 50px;
 		background-color: #f7f7f7;
 	}
 }
-.instragram__wrapper {
+.insta__wrapper {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 13px;
@@ -13,7 +13,7 @@
 		margin-bottom: 35px;
 	}
 }
-.instragram__link {
+.insta__link {
 	font-weight: 700;
 	font-size: 13px;
 	line-height: 22px;
@@ -26,7 +26,7 @@
 		display: block;
 	}
 }
-.instragram__list {
+.insta__list {
 	@include mq(768px, min) {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -36,7 +36,7 @@
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
-.instragram__item {
+.insta__item {
 	display: flex;
 	@include mq(767px, max) {
 		&:nth-child(n + 2) {
@@ -49,10 +49,10 @@
 		}
 	}
 	@include mq(1200px, min) {
-		display: flex !important;
+		display: flex;
 	}
 }
-.instragram__img {
+.insta__img {
 	width: 100%;
 	margin-right: 22px;
 	@include mq(768px, min) {
