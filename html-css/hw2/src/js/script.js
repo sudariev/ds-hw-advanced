@@ -20,9 +20,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             menuBtnBottomLine.classList.toggle(
                 "header__menu-btn-bottom--close"
             );
-
             menu.classList.toggle("menu--shown");
-
             body.classList.toggle("nav-is-open");
         };
 
@@ -35,9 +33,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 menuBtnBottomLine.classList.remove(
                     "header__menu-btn-bottom--close"
                 );
-
                 menu.classList.remove("menu--shown");
-
                 body.classList.remove("nav-is-open");
             }
         };
